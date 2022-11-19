@@ -37,7 +37,8 @@ public void setName(String name) {
   public void setValue(int value) {
         this.value = value;
   
-}
+  }
+} 
 class Main {
 	public static void main(String[] args) {
     ArrayList<Inventory> array = new ArrayList<Inventory>();
@@ -54,24 +55,26 @@ class Main {
     System.out.println("Press 3 to update an item.");
     System.out.println("Press 4 to show all the items.");
     System.out.println("Press 5 to quit the program.");
-      select = sc.nextInt();
+       select = sc.nextInt();
       if(select == 1){
     System.out.println("Enter the name:");
-        String name = sc.next();
+       String name = sc.next();
     System.out.println("Enter the serial number:");
         String serial = sc.next();
    System.out.println("Enter the value in dollars (whole number):");
-        int value = sc.nextInt();
+       int value = sc.nextInt();
         
-      x = new Inventory(name, serial, value);
+     x = new Inventory(name, serial, value);
        
     array.add(x);
+     
         
-      }else if(select == 2){
+      }
+       else if(select == 2){
         System.out.println("Enter the serial number of the item to delete:");
-        String serial = sc.nextLine();
+        String serial = sc.next();
         int index = array.indexOf(serial);
-        array.remove(index);
+        array.remove(index + 1);
       
         
       
@@ -79,7 +82,8 @@ class Main {
         
     
    
-      }else if(select == 3){
+      }
+      else if(select == 3){
         System.out.println("Enter the serial number of the item to change:");
       String serial = sc.next();
         System.out.println("Enter the new name:");
@@ -90,7 +94,8 @@ class Main {
         Inventory c = array.get(index + 1);
       c.setName(newName);
       c.setValue(newValue);
-    }else if(select == 4){
+    }
+      else if(select == 4){
         for (Inventory inv : array)
 	      { 		      
 	           inv.print();		
@@ -101,11 +106,11 @@ class Main {
       } while(select != 5);
       
       
-    
+    sc.close();
    
     
 	}
 
-}	
-}
+ }	
+
 
