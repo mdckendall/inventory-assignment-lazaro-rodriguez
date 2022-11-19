@@ -72,17 +72,26 @@ class Main {
       }
        else if(select == 2){
         System.out.println("Enter the serial number of the item to delete:");
-        String serial = sc.next();
+        
+         String serial = sc.next();
         int index = array.indexOf(serial);
         array.remove(index + 1);
       
-        
-      
+       }
+         
+         
+         
+         
+         
+         
+         
+         
+       
     
         
     
    
-      }
+      
       else if(select == 3){
         System.out.println("Enter the serial number of the item to change:");
         String serial = sc.next();
