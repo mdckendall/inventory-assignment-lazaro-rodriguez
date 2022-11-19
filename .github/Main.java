@@ -57,11 +57,11 @@ class Main {
     System.out.println("Press 5 to quit the program.");
        select = sc.nextInt();
       if(select == 1){
-    System.out.println("Enter the name: ");
+    System.out.println("Enter the name:");
        String name = sc.next();
-    System.out.println("Enter the serial number: ");
+    System.out.println("Enter the serial number:");
         String serial = sc.next();
-   System.out.println("Enter the value in dollars (whole number): ");
+   System.out.println("Enter the value in dollars (whole number):");
        int value = sc.nextInt();
         
      x = new Inventory(name, serial, value);
@@ -71,7 +71,7 @@ class Main {
         
       }
        else if(select == 2){
-        System.out.println("Enter the serial number of the item to delete: ");
+        System.out.println("Enter the serial number of the item to delete:");
         String serial = sc.next();
         int index = array.indexOf(serial);
         array.remove(index + 1);
@@ -84,11 +84,11 @@ class Main {
    
       }
       else if(select == 3){
-        System.out.println("Enter the serial number of the item to change: ");
-        String serial = sc.nextLine();
-        System.out.println("Enter the new name: ");
-      String newName = sc.nextLine();
-        System.out.println("Enter the new value in dollars (whole number): ");
+        System.out.println("Enter the serial number of the item to change:");
+        String serial = sc.next();
+        System.out.println("Enter the new name:");
+      String newName = sc.next();
+        System.out.println("Enter the new value in dollars (whole number):");
         int newValue = sc.nextInt();
         int index = array.indexOf(serial);
         Inventory c = array.get(index + 1);
