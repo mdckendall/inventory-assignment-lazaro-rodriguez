@@ -85,9 +85,9 @@ class Main {
       }
       else if(select == 3){
         System.out.println("Enter the serial number of the item to change: ");
-      String serial = sc.next();
+        String serial = sc.nextLine();
         System.out.println("Enter the new name: ");
-      String newName = sc.next();
+      String newName = sc.nextLine();
         System.out.println("Enter the new value in dollars (whole number): ");
         int newValue = sc.nextInt();
         int index = array.indexOf(serial);
