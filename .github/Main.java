@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 class Inventory {
   public String name;
   public String serial;
@@ -38,8 +39,15 @@ public void setName(String name) {
         this.value = value;
   
   }
+  
 } 
 class Main {
+ 
+
+
+
+
+  
 	public static void main(String[] args) {
     ArrayList<Inventory> array = new ArrayList<Inventory>();
     int select;
@@ -77,12 +85,26 @@ class Main {
       }
        else if(select == 2){
         System.out.println("Enter the serial number of the item to delete:");
-        
-         String serial = sc.next();
-        int index = array.indexOf(serial);
-        array.remove(index + 1);
       
-       }
+         String rSerial = sc.next();
+        for(int s = 0;s < array.size(); s++){
+          if(rSerial.equals(array.get(s).serial)){
+            array.remove(s);
+          }
+        }
+        
+          }
+        
+            
+            
+         
+
+      
+
+         
+                    
+      
+       
          
          
          
@@ -99,16 +121,27 @@ class Main {
       
       else if(select == 3){
         System.out.println("Enter the serial number of the item to change:");
-        String serial = sc.nextLine();
+        String nSerial = sc.nextLine();
         System.out.println("Enter the new name:");
       String newName = sc.nextLine();
         System.out.println("Enter the new value in dollars (whole number):");
         int newValue = sc.nextInt();
-        int index = array.indexOf(serial);
-        Inventory c = array.get(index + 1);
-      c.setName(newName);
-      c.setValue(newValue);
-    }
+        for(int s = 0;s < array.size(); s++){
+          if(nSerial.equals(array.get(s).serial)){
+            Inventory c = array.get(s);
+            c.setName(newName);
+            c.setValue(newValue);
+          }
+        
+        }
+      }
+        
+        
+       
+      
+        //Inventory c = array.get(index);
+      //c.setName(newName);
+      //c.setValue(newValue);}
       else if(select == 4){
         for (Inventory inv : array)
 	      { 		      
