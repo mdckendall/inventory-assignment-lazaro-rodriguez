@@ -95,30 +95,6 @@ class Main {
         
           }
         
-            
-            
-         
-
-      
-
-         
-                    
-      
-       
-         
-         
-         
-         
-         
-         
-         
-         
-       
-    
-        
-    
-   
-      
       else if(select == 3){
         System.out.println("Enter the serial number of the item to change:");
         String nSerial = sc.nextLine();
@@ -139,9 +115,7 @@ class Main {
         
        
       
-        //Inventory c = array.get(index);
-      //c.setName(newName);
-      //c.setValue(newValue);}
+       
       else if(select == 4){
         for (Inventory inv : array)
 	      { 		      
