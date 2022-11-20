@@ -66,7 +66,8 @@ class Main {
        select = sc.nextInt();
       sc.nextLine();
       if(select == 1){
-         
+
+        
     System.out.println("Enter the name: ");
     String name = sc.nextLine();
       
